@@ -1,0 +1,111 @@
+#include <iostream>
+using namespace std;
+#include <vector>
+#include <string>
+
+struct Valsts
+{
+    string nosaukums;
+    string kods;
+    int firstnumber;
+};
+
+
+int main()
+{
+    vector<Valsts> valstis = {
+    {"Glebasia", "GB", +5},
+    {"Papakia", "PK", +3},
+    {"Vadimia", "VD", +3},
+    {"Nikitia", "NL", +6},
+    {"United States", "US", +1},
+    {"China", "CN", +1},
+    {"India", "IN", +9},
+    {"Indonesia", "ID", +8},
+    {"Pakistan", "PK", +3},
+    {"Brazil", "BR", +2},
+    {"Nigeria", "NG", +8},
+    {"Bangladesh", "BD", +8},
+    {"Russia", "RU", +9},
+    {"Japan", "JP", +8},
+    {"Mexico", "MX", +5},
+    {"Philippines", "PH", +9},
+    {"Vietnam", "VN", +8},
+    {"Ethiopia", "ET", +9},
+    {"Egypt", "EG", +1},
+    {"Germany", "DE", +3},
+    {"Iran", "IR", +9},
+    {"Turkey", "TR", +5},
+    {"Democratic Republic of the Congo", "CD", +8},
+    {"France", "FR", +1},
+    {"Thailand", "TH", +8},
+    {"United Kingdom", "GB", +7},
+    {"Italy", "IT", +3},
+    {"South Africa", "ZA", +8},
+    {"Myanmar", "MM", +9},
+    {"South Korea", "KR", +1},
+    {"Colombia", "CO", +3},
+    {"Tanzania", "TZ", +7},
+    {"Argentina", "AR", +1},
+    {"Kenya", "KE", +7},
+    {"Spain", "ES", +9},
+    {"Ukraine", "UA", +3},
+    {"Uganda", "UG", +7},
+    {"Algeria", "DZ", +7},
+    {"Sudan", "SD", +2},
+    {"Iraq", "IQ", +7},
+    {"Afghanistan", "AF", +7},
+    {"Poland", "PL", +6},
+    {"Canada", "CA", +1},
+    {"Morocco", "MA", +5},
+    {"Saudi Arabia", "SA", +5},
+    {"Uzbekistan", "UZ", +9},
+    {"Peru", "PE", +1},
+    {"Malaysia", "MY", +1},
+    {"Venezuela", "VE", +4},
+    {"Nepal", "NP", +9},
+    {"Mozambique", "MZ", +8},
+    {"Ghana", "GH", +2},
+    {"Yemen", "YE", +7},
+    {"North Korea", "KP", +1},
+    {"Madagascar", "MG", +2},
+    {"Australia", "AU", +4},
+    {"Cameroon", "CM", +2},
+    {"Cote d'Ivoire", "CI", +2},
+    {"Taiwan", "TW", +8},
+    {"Niger", "NE", +9},
+    {"Sri Lanka", "SR", +7},
+    {"Latvia", "LV", +371}
+    };
+
+    string  meklejamaValstsNosaukums;
+    cout << "Ievadiet valsts nosaukumu: ";
+    cin >> meklejamaValstsNosaukums;
+
+    bool irAtrasta = false;
+    for (const auto& valsts : valstis) {
+        if (valsts.nosaukums == meklejamaValstsNosaukums) {
+            cout << "Valsts " << valsts.nosaukums << " kods ir " << valsts.kods << endl;
+            irAtrasta = true;
+            break;
+        }
+    }
+
+    if (!irAtrasta) {
+        cout << "Valsts ar nosaukumu " << meklejamaValstsNosaukums << "    nav" << endl;
+    }
+    int yournumber;
+    cout << "Ievadiet jusu numuru:";
+    cin >> yournumber;
+    for (const auto& valsts : valstis) {
+        if (valsts.nosaukums == meklejamaValstsNosaukums) {
+            cout << "Your number is +" << valsts.firstnumber << yournumber << endl;
+            irAtrasta = true;
+            break;
+
+
+        }
+    }
+
+    return 0;
+}
